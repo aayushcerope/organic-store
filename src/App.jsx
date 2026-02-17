@@ -3,6 +3,7 @@ import HomePage from "./pages/HomePage";
 import ProductDetailsPage from "./pages/ProductDetailsPage";
 import CheckoutPage from "./pages/CheckoutPage";
 import LoginPage from "./pages/LoginPage";
+import OrderPage from "./pages/OrderPage";
 
 export default function App() {
   return (
@@ -12,6 +13,7 @@ export default function App() {
         <Route path="/product/:productId" element={<ProductDetailsPage />} />
         <Route path="/checkout" element={<CheckoutPage />} />
         <Route path="/login" element={<LoginPage />} />
+        <Route path="/order" element={<OrderPage />} />
         <Route
           path="*"
           element={
@@ -23,6 +25,9 @@ export default function App() {
                 </Link>
                 <Link className="px-4 py-2 rounded-full bg-primary text-white" to="/checkout">
                   Checkout
+                </Link>
+                <Link className="px-4 py-2 rounded-full bg-primary text-white" to="/order">
+                  Order
                 </Link>
                 <Link className="px-4 py-2 rounded-full bg-primary text-white" to="/login">
                   Login

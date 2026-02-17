@@ -17,6 +17,9 @@ export default function HomePage() {
             <Link className="px-3 py-2 rounded-full bg-primary/10" to="/checkout">
               Checkout ({cartCount})
             </Link>
+            <Link className="px-3 py-2 rounded-full bg-primary/10" to="/order">
+              Order
+            </Link>
             <Link className="px-3 py-2 rounded-full bg-primary/10" to="/login">
               Login
             </Link>
