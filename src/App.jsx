@@ -9,7 +9,7 @@ export default function App() {
     <div className="min-h-screen bg-background-light">
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/product" element={<ProductDetailsPage />} />
+        <Route path="/product/:productId" element={<ProductDetailsPage />} />
         <Route path="/checkout" element={<CheckoutPage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route
@@ -20,9 +20,6 @@ export default function App() {
               <div className="flex gap-3">
                 <Link className="px-4 py-2 rounded-full bg-primary text-white" to="/">
                   Home
-                </Link>
-                <Link className="px-4 py-2 rounded-full bg-primary text-white" to="/product">
-                  Product
                 </Link>
                 <Link className="px-4 py-2 rounded-full bg-primary text-white" to="/checkout">
                   Checkout
