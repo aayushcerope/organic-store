@@ -4,11 +4,12 @@ import ProductDetailsPage from "./pages/ProductDetailsPage";
 import CheckoutPage from "./pages/CheckoutPage";
 import LoginPage from "./pages/LoginPage";
 import OrderPage from "./pages/OrderPage";
+import Layout from "./components/Layout";
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-background-light">
-      <Routes>
+    <Routes>
+      <Route element={<Layout />}>
         <Route path="/" element={<HomePage />} />
         <Route path="/product/:productId" element={<ProductDetailsPage />} />
         <Route path="/checkout" element={<CheckoutPage />} />
@@ -17,7 +18,7 @@ export default function App() {
         <Route
           path="*"
           element={
-            <div className="min-h-screen flex flex-col items-center justify-center gap-4 p-6">
+            <div className="min-h-[60vh] flex flex-col items-center justify-center gap-4 p-6">
               <h1 className="text-3xl font-bold">Page not found</h1>
               <div className="flex gap-3">
                 <Link className="px-4 py-2 rounded-full bg-primary text-white" to="/">
@@ -36,7 +37,7 @@ export default function App() {
             </div>
           }
         />
-      </Routes>
-    </div>
+      </Route>
+    </Routes>
   );
 }

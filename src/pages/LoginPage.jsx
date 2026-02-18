@@ -6,7 +6,7 @@ export default function LoginPage() {
   const isLogin = activeForm === "login";
 
   return (
-    <main className="min-h-screen flex items-center justify-center p-4 bg-green-50">
+    <main className="flex items-center justify-center p-4 bg-green-50 min-h-[70vh]">
       <div className="w-full max-w-4xl grid md:grid-cols-2 rounded-2xl shadow-xl overflow-hidden bg-white">
         <section className="hidden md:flex bg-primary text-white p-10 items-end">
           <h2 className="text-4xl font-black">Organic food for a healthier you.</h2>
