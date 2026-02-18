@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useCart } from "../context/CartContext";
 import { formatPrice } from "../data/products";
 
@@ -16,6 +16,7 @@ function Field({ label, placeholder, fullWidth = false }) {
 
 export default function CheckoutPage() {
   const { items, cartTotal } = useCart();
+  const navigate = useNavigate();
   const shippingCost = items.length ? 0 : 0;
   const estimatedTax = items.length ? cartTotal * 0.08 : 0;
   const orderTotal = cartTotal + shippingCost + estimatedTax;
@@ -161,7 +162,10 @@ export default function CheckoutPage() {
             </p>
           </div>
 
-          <button className="mt-4 w-full rounded-xl bg-primary py-3 text-lg font-bold text-white shadow-lg shadow-primary/25">
+          <button
+            className="mt-4 w-full rounded-xl bg-primary py-3 text-lg font-bold text-white shadow-lg shadow-primary/25"
+            onClick={() => navigate("/order")}
+          >
             Place Order →
           </button>
           <p className="mt-3 text-center text-xs text-[#7b867d]">Encrypted and Secure Payment</p>
