@@ -89,7 +89,7 @@ export default function HomePage() {
               {visibleProducts.map((product) => (
                 <article
                   key={product.id}
-                  className="bg-white border border-primary-light rounded-xl overflow-hidden hover:shadow-lg transition"
+                  className="bg-white border border-primary-light rounded-xl overflow-hidden transition-transform transition-shadow duration-200 hover:-translate-y-2 hover:shadow-lg"
                 >
                   <Link to={`/product/${product.id}`}>
                     <img className="h-56 w-full object-cover" src={product.image} alt={product.name} />
