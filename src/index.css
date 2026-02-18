@@ -21,3 +21,13 @@ body {
   background: #cbd5e1;
   border-radius: 4px;
 }
+
+.product-card-3d {
+  @apply transform-gpu transition-[transform,box-shadow] duration-300 ease-out;
+  transform: perspective(1000px) translateY(0) rotateX(0) scale(1);
+}
+
+.product-card-3d:hover {
+  transform: perspective(1000px) translateY(-14px) rotateX(6deg) scale(1.02);
+  @apply shadow-2xl;
+}
